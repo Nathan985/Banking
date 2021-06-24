@@ -20,7 +20,9 @@ export const Container = styled.div<ContainerProps>`
   height: 102px;
   transition: .5s;
   border-radius: 6px;
-  background: linear-gradient(to right, rgba(65, 65, 65, 0.9), rgba(24, 24, 24, 0.7) 52%);
+  background: linear-gradient(to right, rgba(65, 65, 65, 0.9) 22%, rgba(24, 24, 24, 0.7));
+  -webkit-backdrop-filter: blur(20px); /* Safari 9+ */
+  backdrop-filter: blur(20px); /* Chrome and Opera */
   padding: 5px;
   cursor: pointer;
   &:hover{
