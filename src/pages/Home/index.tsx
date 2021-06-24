@@ -27,6 +27,51 @@ const Home: React.FC = () => {
       >
         <CardUserProps 
           key={1}
+          name='Felipe B.'
+          avatar='https://avatars.githubusercontent.com/u/56661571?v=4'
+          amount={82.32}
+          banking='Nubank'
+          date='24/06/21'
+          smallCard={visibleSidebar}
+        />
+        <CardUserProps 
+          key={1}
+          name='Nathan R.'
+          avatar='https://avatars.githubusercontent.com/u/56900147?v=4'
+          amount={52.32}
+          banking='Nubank'
+          date='16/04/21'
+          smallCard={visibleSidebar}
+        />
+        <CardUserProps 
+          key={1}
+          name='Diego P.'
+          avatar='https://avatars.githubusercontent.com/u/56850242?v=4'
+          amount={12.17}
+          banking='Nubank'
+          date='24/04/21'
+          smallCard={visibleSidebar}
+        />
+        <CardUserProps 
+          key={1}
+          name='Leonardo L.'
+          avatar='https://avatars.githubusercontent.com/u/56661618?v=4'
+          amount={43.32}
+          banking='Nubank'
+          date='16/04/21'
+          smallCard={visibleSidebar}
+        />
+        <CardUserProps 
+          key={1}
+          name='Rodrigo R.'
+          avatar='https://avatars.githubusercontent.com/u/52612763?v=4'
+          amount={10.32}
+          banking='Nubank'
+          date='16/04/21'
+          smallCard={visibleSidebar}
+        />
+        <CardUserProps 
+          key={1}
           name='Nathan R.'
           avatar='https://avatars.githubusercontent.com/u/56900147?v=4'
           amount={52.32}

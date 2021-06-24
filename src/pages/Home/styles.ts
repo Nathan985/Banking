@@ -9,6 +9,9 @@ export const Container = styled.div`
   width: 100%;
   position: relative;
   align-items: center;
+  @media(max-width: 1350px){
+    justify-content: center;
+  }
 `;
 
 interface ContainerListProps{
@@ -39,6 +42,25 @@ export const ContainerList = styled.div<ContainerListProps>`
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 5px;
   }
+  @media(max-width: 1350px){
+    position: fixed;
+    flex-direction: ${props => props.visible ? 'row' : 'column'};
+    
+    width: 100%;
+    max-width: 100%;
+    height: ${props => props.visible ? '110px' : '70%'};
+    top: 0;
+    overflow-y: ${props => props.visible ? 'hidden' : 'auto'};
+    ::-webkit-scrollbar {
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 6px;
+      height: 3px;
+      border-radius: 5px;
+      padding-right: 13px;
+    }
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    padding: 15 10px;
+  }
 `;
 export const ButtonVisibleList = styled.div<ContainerListProps>`
   display: flex;
@@ -52,10 +74,18 @@ export const ButtonVisibleList = styled.div<ContainerListProps>`
   width: 50px;
   height: 50px;
   cursor: pointer;
+  z-index: 1;
   &:hover{
     filter: brightness(0.9);
   }
   margin-right: 10px;
+  transition: .5s;
+  @media(max-width: 1350px){
+    position: fixed;
+    top: ${props => props.visible ? '126px' : '72%'};
+    width: 35px;
+    height: 35px;
+  }
 `;
 
 interface IconVisibleProps{
@@ -67,6 +97,12 @@ export const IconVisible = styled(KeyboardArrowRight)<IconVisibleProps>`
   height: 40px;
   transition: transform .5s;
   transform: rotate(${props => props.stateMode ? 0 : -180}deg);
+  @media(max-width: 1350px){
+    transform: rotate(${props => props.stateMode ? 90 : -90}deg);
+    overflow-x: ${props => props.stateMode ? 'auto' : 'hidden' };
+    width: 25px;
+    height: 25px;
+  }
 `;
 
 export const ContainerFormController = styled.div`
@@ -79,6 +115,12 @@ export const ContainerFormController = styled.div`
   border-radius: 15px;
   padding: 20px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  @media(max-width: 1350px){
+    width: 95%;
+    margin-top: 8rem;
+    padding: 10px;
+    height: auto
+  }
 `;
 
 export const TitlePage = styled.div`
@@ -99,6 +141,9 @@ export const SectionInputs = styled.div`
   padding: 30px;
   justify-content: space-between;
   align-content: space-around;
+  @media(max-width: 1350px){
+    padding: 5px;
+  }
 `;
 
 export const ContainerButtons = styled.div`
